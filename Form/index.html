@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de estudiante</title>
+    <link rel="icon" href="../bootstrap.png">
+    <!--Usamos una de las formas más sencillas para conectar boostrap sin descargarlo, y es de usar 
+    un servidor, que es ofrecido por el mismo boostrap llamado jsDelivr, que nos entrega el CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+    <!--Le damos responsive a el contenedor con container-fluid-->
+    <header class="container-fluid p-2 text-center bg-dark text-white ">
+        <nav class="navbar navbar-expand-lg navbar-dark  ">
+            <div class="container-fluid">
+                <span class="navbar-brand">Desafío N°2</span>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../carrusel/carrusel.html">Carrusel</a></li>
+                <li class="nav-item"><a class="nav-link"  href="#">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container p-1 my-2" style="background-color: white; border: solid black 1px;">
+        <!--Le pondremos Grid al article para poderlo hacer responsive de mejor manera-->
+        <article class="row">
+            <!--Con la clase Col-x podemos colocar la cantidad de columnas de las 12 que nos da el
+            grid-->
+            <h3 class="text-center fw-bolder col-12">
+                Universidad Don Bosco
+                <br>
+                 <span class="fs-6 fw-light">Registro de estudiante</span>
+            </h3>   
+             <!--Al poner la imágen le damos un display block con el d-block y 
+             el margen auto para que se centre con mx-auto, además de darle el
+             resposive con el img-fluid.-->
+             <img src="img/logo.jpg" alt="" class="img-fluid d-block mx-auto col-2">
+        </article>
+            <form class="row p-2">
+                <section class="col-sm-7  mb-1">
+                    <label for="txtNombre" class="form-label">Nombre completo del estudiante;</label>
+                    <input type="text"class="form-control" id="txtNombre" required>
+                </section>
+                <sectiom class="col-sm-5 mb-1">
+                    <label for="dateNacimiento" class="form-label">Fecha de nacimiento:</label>
+                    <input type="date" name="" id="dateNacimiento" class="form-control" required>
+                </sectiom>
+                <section class="col-sm-6 mb-1">
+                    <label for="txtDUI" class="form-label">DUI del estudiante:</label>
+                    <input type="text" id="txtDUI" pattern="^\d{8}-\d{1}$" class="form-control" required>
+                </section>
+                <section class="col-sm-6 mb-1">
+                    <label for="" class="form-label">Genero:</label>
+                    <div class="input-group">
+                        <span class="input-group-text">Su genero es</span>
+                        <select name="" id="" class="form-control">
+                            <option value="">...</option>
+                            <option value="">Masculino</option>
+                            <option value="">Femenino</option>
+                        </select>
+                    </div>
+                </section>
+                <section class="col-sm-12 mb-1">
+                    <label for="txtEmail">Correo electronico:</label>
+                    <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input type="email" name="" id="txtEmail" class="form-control " required>
+                    </div>
+                </section>  
+                <section class="col-sm-6 mb-1">
+                    <label for="txtTelefono">Télefono:</label>
+                    <input type="tel" name="" id="txtTelefono" class="form-control">
+                </section>
+                <section class="col-sm-6 mb-1">
+                    <label for="txtCodigo">Código del estudiante;</label>
+                    <input type="tex" name="" id="txtCodigo" pattern="^\w{2}\d{6}$" class="form-control" required>
+                </section>
+                <section class="col-sm-12 mb-1">
+                    <label for="txtDireccion">Dirección: </label>
+                    <input type="text" name="" id="txtDireccion" required class="form-control" >
+                </section>
+                <section class="col-sm-12">
+                    <input type="submit" class="btn btn-outline-primary " value="Registrar">
+                </section>
+        </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>
